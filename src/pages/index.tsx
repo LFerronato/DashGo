@@ -1,5 +1,6 @@
 import { Flex, Button, Stack } from "@chakra-ui/react";
 import { Input } from '@/components/form/Input'
+import Link from 'next/link'
 
 function Login() {
   const x = true
@@ -23,7 +24,9 @@ function Login() {
           <Input name="email" label="E-mail" type="email" placeholder="seu@email.com" />
           <Input name="password" label="Senha" type="password" placeholder="*********" />
         </Stack>
-        <Button type="submit" mt="6" colorScheme="pink" size="lg">Entrar</Button>
+        <Link href='/dashboard'>
+          <Button type="button" mt="6" colorScheme="pink" size="lg">Entrar</Button>
+        </Link>
       </Flex>
     </Flex>
   );
